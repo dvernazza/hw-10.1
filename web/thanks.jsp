@@ -1,3 +1,4 @@
+<%@ taglib prefix="mma" uri="/WEB-INF/murach.tld" %>
 <!DOCTYPE html>
 <html>
   <head>
@@ -6,7 +7,7 @@
     <link rel="stylesheet" href="styles/main.css" type="text/css"/>    
   </head>
 
-  <body>
+  
     <h1>Thanks for joining our email list</h1>
 
     <p>Here is the information that you entered:</p>
@@ -17,6 +18,12 @@
     <span>${user.firstName}</span><br>
     <label>Last Name:</label>
     <span>${user.lastName}</span><br>
+    
+    <mma:ifWeekday>
+      <p>Live support available at 1-800-555-2222</p>
+    </mma:ifWeekday>
+  
+   <p>The current date is <mma:currentDate /> and the current time is <mma:currentTime />.</p>
 
     <p>To enter another email address, click on the Back 
       button in your browser or the Return button shown 
@@ -27,5 +34,5 @@
       <input type="submit" value="Return">
     </form>
 
-  </body>
+  
 </html>
